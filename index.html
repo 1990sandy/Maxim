@@ -59,15 +59,15 @@
 							<div class="row">	
 								<div class="span12">
 								<div class="field your-name form-group">
-										<input type="text" name="entry.508355066" class="form-control" id="name" placeholder=" PF ID" data-rule="len:7" data-msg="PF Number must be 7 digits" />
+										<input type="text" name="entry.508355066" class="form-control" id="entry.508355066" placeholder=" PF ID" data-rule="len:7" data-msg="PF Number must be 7 digits" />
 										<div class="validation"></div>
 									</div>
 									<div class="field your-name form-group">
-										<input type="text" name="entry.1638011676" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+										<input type="text" name="entry.1638011676" class="form-control" id="entry.1638011676" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
 										<div class="validation"></div>
 									</div>
 									<div class="field your-email form-group">
-										<input type="text" class="form-control" name="entry.1836092468" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+										<input type="text" class="form-control" name="entry.1836092468" id="entry.1836092468" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
 										<div class="validation"></div>
 									</div>
 									<div class="field phone form-group">
@@ -148,8 +148,27 @@
 	<script src="js/inview.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="contactform/contactform.js"></script>
+	<!-- <script src="contactform/contactform.js"></script> -->
+<script type='text/javascript'>
+    /* attach a submit handler to the form */
+    $("#frm").submit(function(event) {
+debugger;
+      /* stop form from submitting normally */
+      event.preventDefault();
 
+      /* get the action attribute from the <form action=""> element */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+
+      /* Send the data using post with element id name and name2*/
+      var posting = $.post( url, { 'entry.508355066': $('#entry.508355066').val(), 'entry.1638011676': $('#entry.1638011676').val(), 'entry.1836092468': $('#entry.1836092468').val() } );
+
+      /* Alerts the results */
+      posting.done(function( data ) {
+        alert('success');
+      });
+    });
+</script>
 </body>
 
 </html>
