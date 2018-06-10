@@ -934,12 +934,12 @@ section#about {
 	display:block;
 }
 
-#contact-form {
+#frm {
 	position: relative;
 	z-index: 999;
 }
 
-#contact-form input[type=text], .contactForm textarea {
+#frm input[type=text], .contactForm textarea {
 	background: rgba(227, 231, 228, 1);
 	font-family: 'Open Sans', sans serif;
 	border: 0;
@@ -952,7 +952,7 @@ section#about {
 	height: 156px;
 }
 
-#contact-form input[type=text]:focus, .contactForm textarea:focus {
+#frm input[type=text]:focus, .contactForm textarea:focus {
 	background: #fff;
 	color: #555;
 	box-shadow: none;
@@ -962,11 +962,11 @@ section#about {
 	-moz-transition: background 0.25 ease-in;
 	-webkit-transition: background 0.25 ease-in;
 }
-#contact-form input[type=text] {
+#frm input[type=text] {
 	height: 60px;
 	margin-bottom:30px;
 }
-#contact-form input[type=submit] {
+#frm input[type=submit] {
 	color: #fff;
 	width: 185px;
 	height: 60px;
@@ -985,10 +985,10 @@ section#about {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 }
-#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
+#frm input[type=submit]:hover, #frm input[type=submit]:active {
 	background: #43413e !important;
 }
-#contact-form textarea {
+#frm textarea {
 	padding-top: 1em;
 }
 div.cform-response-output {
@@ -1710,10 +1710,10 @@ i.icon-white {
 }
 		
 /* Contact Form */
-	#contact-form {
+	#frm {
 		overflow: hidden;
 	}
-	#contact-form input[type=submit] {
+	#frm input[type=submit] {
 		width: 100%;
 	}
 }
