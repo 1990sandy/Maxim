@@ -371,7 +371,8 @@ header .logo {
 
 /* --- Header slider --- */
 #header-wrapper.header-slider {
-	background: #444 url(../Image/30.jpg) no-repeat center center fixed;
+	/*background: #444 url(../Image/30.jpg) no-repeat center center fixed;*/
+	background: #444 url(../Image/kaas_flower_stream_2.jpg) no-repeat center center fixed;
 	width:100%
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
